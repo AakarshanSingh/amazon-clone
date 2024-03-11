@@ -55,11 +55,17 @@ class _AddressScreenState extends State<AddressScreen> {
       addressToBeUsed = addressFromProvider;
       showSnackBar(context, 'Error');
     }
-    if (addressFromProvider.isEmpty) {
-      showSnackBar(context, 'Please provide an address');
-      throw Exception('Please enter all the values');
+    if (Provider.of<UserProvider>(context,listen: false).user.address.isEmpty) {
+      addressServices.saveUserAddress(
+        context: context,
+        address: addressToBeUsed,
+      );
     }
-    print('address: $addressToBeUsed');
+    addressServices.placeOrder(
+      context: context,
+      address: addressToBeUsed,
+      totalSum: widget.totalAmount.toString(),
+    );
   }
 
   @override
