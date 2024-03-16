@@ -12,7 +12,6 @@ Full Stack Amazon Clone along with Admin Panel
 - **Rating:** Allows users to rate and review products based on their experiences.
 - **Getting Deal of the Day:** Highlights a special deal of the day for users to take advantage of.
 - **Cart:** Allows users to add products to their cart for later purchase.
-- **Checking out with Google/Apple Pay:** Provides convenient payment options for users through Google Pay or Apple Pay.
 - **Viewing My Orders:** Allows users to see a list of their past orders.
 - **Viewing Order Details & Status:** Provides detailed information about each order, including current status.
 - **Sign Out:** Enables users to securely log out of their accounts.
