@@ -1,16 +1,72 @@
-# amazon_clone
+# Amazon Clone
 
-A new Flutter project.
+Full Stack Amazon Clone along with Admin Panel
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Email & Password Authentication
+- Persisting Auth State
+- Searching Products
+- Filtering Products (Based on Category)
+- Product Details
+- Rating
+- Getting Deal of the Day
+- Cart
+- Checking out with Google/Apple Pay
+- Viewing My Orders
+- Viewing Order Details & Status
+- Sign Out
+- Admin Panel
+  - Viewing All Products
+  - Adding Products
+  - Deleting Products
+  - Viewing Orders
+  - Changing Order Status
+  - Viewing Total Earnings
+  - Viewing Category Based Earnings
 
-A few resources to get you started if this is your first Flutter project:
+## Adding dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Before running, create a file named .env in server folder and add the following variables
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+  MONGO_DB_URI=
+  JWT_SECRET=
+```
+
+- Also change the String uri to your server ip and port in following file `lib/constants/global_variables.dart`
+
+## Running Locally
+
+Cloning the repo
+
+```
+  git clone https://github.com/AakarshanSingh/amazon-clone.git
+```
+
+Changing directory
+
+```
+  cd amazon-clone
+```
+
+Starting up server
+
+```bash
+  cd server
+  npm install
+  npm start
+```
+
+Client Side
+
+```bash
+  flutter pub get
+  flutter run
+```
+
+## Tech Used
+
+**Server**: Node.js, Express, Mongoose, MongoDB, Cloudinary
+
+**Client**: Flutter, Provider
