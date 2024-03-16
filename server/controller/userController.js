@@ -86,7 +86,7 @@ export const order = async (req, res) => {
         return res.status(400).json({ msg: `${product.name} is out of stock` });
       }
     }
-    
+
     let user = await User.findById(req.user);
     user.cart = [];
     user = await user.save();
@@ -101,6 +101,15 @@ export const order = async (req, res) => {
 
     order = await order.save();
     res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+export const myOrders = async (req, res) => {
+  try {
+    let orders = await Order.find({ userId: req.user });
+    res.json(orders);
   } catch (error) {
     res.status(500).json({ error: e.message });
   }
