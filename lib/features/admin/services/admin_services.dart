@@ -212,7 +212,6 @@ class AdminServices {
           'x-auth-token': userProvider.user.token
         },
       );
-      print(res.body);
       httpErrorHandler(
         response: res,
         context: context,
