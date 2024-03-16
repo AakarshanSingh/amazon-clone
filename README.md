@@ -66,6 +66,6 @@ Client Side
 
 ## Tech Used
 
-**Server**: Node.js, Express, Mongoose, MongoDB, Cloudinary
+**Server**: Node.js, Express, MongoDB, Cloudinary
 
 **Client**: Flutter, Provider
